@@ -4,9 +4,12 @@ import Gallery3 from "../assets/gallery/Vanaha-[3-BHK-Grande].jpg";
 import Gallery4 from "../assets/gallery/Vanaha-[3-BHK].jpg";
 import Gallery5 from "../assets/gallery/Vanaha-[4-BHK].jpg";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { Mycontext } from "../App";
 
 const FloorPlans = () => {
+  const {floor}=useContext(Mycontext)
+
   const galleryRef = useRef();
   const slideRight = () => {
     galleryRef.current.scrollBy({ left: 750, behavior: "smooth" }); // Adjust the value as needed
@@ -16,7 +19,7 @@ const FloorPlans = () => {
     galleryRef.current.scrollBy({ left: -750, behavior: "smooth" }); // Adjust the value as needed
   };
   return (
-    <div className="lg:p-8 px-4">
+    <div className="lg:p-8 px-4" ref={floor}>
       <div className="flex justify-between">
         <div className=" py-3  px-0 lg:px-10">
           <p className="lg:text-3xl text-2xl py-3  lg:px-10">Floor Plans</p>

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Mycontext } from "../App";
 
 const Location = () => {
+  const {location}=useContext(Mycontext)
+
   return (
-    <div className="text-start flex flex-col gap-5 px-5 lg:px-10 lg:py-52 py-16 ">
+    <div ref={location} className="text-start flex flex-col gap-5 px-5 lg:px-10 lg:py-52 py-16 ">
       <p className="lg:text-4xl text-3xl ">6 km from Chandni Chowk</p>
       <p className="text-sm text-gray-500 lg:w-96">
         Ryan International School, Symbiosis International University, and

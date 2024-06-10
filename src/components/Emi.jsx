@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { Mycontext } from "../App";
 
 const Emi = () => {
   const [montEmi, setMontEmi] = useState(71221);
+  const {emi}=useContext(Mycontext)
+
   return (
-    <div className="px-5 lg:px-10">
+    <div className="px-5 lg:px-10" ref={emi}>
       <p className="lg:text-4xl text-3xl text-center py-10">Find an EMI plan that works for you</p>
 
       <div className="flex justify-between">

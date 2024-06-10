@@ -10,10 +10,13 @@ import Gallery9 from "../assets/gallery/gallery9.webp";
 import Gallery10 from "../assets/gallery/gallery10.webp";
 import Gallery11 from "../assets/gallery/gallery11.webp";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { Mycontext } from "../App";
 
 const Gallery = () => {
   const galleryRef = useRef();
+  const {about}=useContext(Mycontext)
+
   const slideRight = () => {
     galleryRef.current.scrollBy({ left: 750, behavior: "smooth" }); // Adjust the value as needed
   };
@@ -22,7 +25,7 @@ const Gallery = () => {
     galleryRef.current.scrollBy({ left: -750, behavior: "smooth" }); // Adjust the value as needed
   };
   return (
-    <div className="lg:p-8 px-4">
+    <div className="lg:p-8 px-4" ref={about}>
       <div className="flex justify-between">
         <p className="lg:text-3xl text-2xl py-3  lg:px-10">Project Gallery</p>
         <div className="flex gap-5 items-center">
