@@ -4,6 +4,7 @@ import Menu from "../../assets/menu.png";
 import { Mycontext } from "../../App";
 
 const NavBar = () => {
+  const topSpace = 100;
   const scrollToRef = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop - topSpace,
@@ -23,7 +24,7 @@ const NavBar = () => {
   } = useContext(Mycontext);
 
   return (
-    <div className="flex items-center justify-between shadow-xl h-20 px-5 lg:px-16 fixed left-0 right-0 top-0 bg-white">
+    <div className="flex items-center z-20 justify-between shadow-xl h-20 px-5 lg:px-16 fixed left-0 right-0 top-0 bg-white">
       <img
         src={Logo}
         alt=".."

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { Mycontext } from "../App";
 
 const Contact = () => {
+  const {contact}=useContext(Mycontext)
+
   return (
-    <div className="flex lg:flex-row flex-col gap-10 px-5 lg:px-10 my-28">
+    <div ref={contact} className="flex lg:flex-row flex-col gap-10 px-5 lg:px-10 my-28">
       <p className="text-4xl lg:block hidden  w-full md:w-[33%]">
         Contact <br />
         Vanaha

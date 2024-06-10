@@ -4,9 +4,12 @@ import Qr1 from "../assets/qr/qr1.png";
 import Qr2 from "../assets/qr/qr2.png";
 import Qr3 from "../assets/qr/qr3.png";
 import { BsFileEarmarkPdf } from "react-icons/bs";
+import { Mycontext } from "../App";
+import { useContext } from "react";
 const Rera = () => {
+  const {rera}=useContext(Mycontext)
   return (
-    <div className="flex lg:justify-center px-5 lg:px-10 gap-20 my-10">
+    <div ref={rera} className="flex lg:justify-center px-5 lg:px-10 gap-20 my-10">
       <img src={ReraImg} alt="" className="rounded-full w-96 h-96 lg:block hidden" />
       <div className="text-gray-600 flex flex-col gap-4">
         <p className="text-2xl">MahaRERA Registration Numbers</p>

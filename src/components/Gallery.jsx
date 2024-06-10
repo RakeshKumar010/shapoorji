@@ -15,7 +15,7 @@ import { Mycontext } from "../App";
 
 const Gallery = () => {
   const galleryRef = useRef();
-  const {about}=useContext(Mycontext)
+  const {gallery}=useContext(Mycontext)
 
   const slideRight = () => {
     galleryRef.current.scrollBy({ left: 750, behavior: "smooth" }); // Adjust the value as needed
@@ -25,7 +25,7 @@ const Gallery = () => {
     galleryRef.current.scrollBy({ left: -750, behavior: "smooth" }); // Adjust the value as needed
   };
   return (
-    <div className="lg:p-8 px-4" ref={about}>
+    <div className="lg:p-8 px-4" ref={gallery}>
       <div className="flex justify-between">
         <p className="lg:text-3xl text-2xl py-3  lg:px-10">Project Gallery</p>
         <div className="flex gap-5 items-center">

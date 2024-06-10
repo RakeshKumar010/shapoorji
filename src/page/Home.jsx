@@ -15,14 +15,14 @@ const Home = () => {
     <>
       <Banner />
       <About />
-       <Gallery />
+      <Gallery />
       <FloorPlans />
-     <Emi />
-       <Location />
-    <Rera />
-        <Contact />
+      <Emi />
+      <Location />
+      <Rera />
+      <Contact />
       <OtherProject />
-      <FixWhatsapp/>
+      <FixWhatsapp />
     </>
   );
 };
