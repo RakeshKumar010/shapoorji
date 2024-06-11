@@ -11,7 +11,7 @@ const About = () => {
   const {about}=useContext(Mycontext)
 
   return (
-    <div ref={about} className="flex flex-col py-10 lg:items-center gap-5 lg:gap-10 bg-white lg:text-center w-[90vw] lg:w-[70vw] mx-auto">
+    <div ref={about} className="flex flex-col py-10 lg:items-center gap-5 lg:gap-10 bg-white lg:text-center w-full p-5 lg:w-[70vw] mx-auto">
       <img src={Vanaha} alt="..." className="lg:h-32 h-24" />
       <p className="lg:text-4xl text-3xl ">Modern homes in a lush green sanctuary</p>
       <p className="text-teal-500 border border-teal-500 w-max p-1 rounded-full px-3">
