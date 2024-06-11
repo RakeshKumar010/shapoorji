@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 import Rera from "../components/Rera";
 import Location from "../components/Location";
 import FixWhatsapp from "../components/FixWhatsapp";
+import Amenitie from "../components/Amenitie";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Gallery />
       <FloorPlans />
       <Emi />
+      <Amenitie/>
       <Location />
       <Rera />
       <Contact />
